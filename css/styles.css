@@ -1,6 +1,90 @@
+@font-face {
+    font-family: 'Galgo Condensed';
+    src: url(/fonts/Galgo_Condensed/Galgo.ttf);
+}
+
 body {
+    padding: 0;
     margin: 0;
+    font-family: 'Galgo Condensed', sans-serif;
+    background-color: #f0f2f5;
+}
+
+.content-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
     display: flex;
-    flex-direction: row;
-    overflow: hidden;
+    gap: 30px;
+}
+
+.left {
+    flex: 0 0 300px;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* These ensure equal height with right side */
+    height: calc(100% - 40px); /* Subtracting total padding */
+    align-self: stretch;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page-heading {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    color: #333;
+}
+
+h2 {
+    margin: 0 0 15px 0;
+    color: #333;
+}
+
+.tech-stack {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 15px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+    }
+    
+    .left {
+        flex: none;
+        width: 100%;
+        height: auto; /* Reset height for mobile */
+    }
 }
