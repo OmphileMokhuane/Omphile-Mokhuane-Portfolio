@@ -3,13 +3,13 @@ body {
     margin: 0;
     font-family: 'Roboto Mono', sans-serif;
     background-color: #f0f2f5;
+    overflow: hidden;
 }
 
 .content-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
     min-height: 100vh;
     display: flex;
     gap: 30px;
