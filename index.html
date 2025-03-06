@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Portfolio</title>
 </head>
 <body>
-    
+    <div class="bgimage">
+        <canvas class="lamp-anim" id="lamp-anim" width="1500px" height="700px"></canvas>
+    </div> 
+    <div class="container">
+        <div class="left-container"> <!-- Left container for personal introduction -->
+            <h1>Welcome to My Portfolio</h1> <!-- Main heading for the portfolio -->
+            <p>Hello! I'm Omphile Mokhuane, a passionate Graduate developer.</p> <!-- Brief introduction -->
+        </div>
+        <div class="right-container">
+            <nav class="menu"> <!-- Navigation menu for site links -->
+                <ul> <!-- Unordered list for menu items -->
+                    <li> <!-- List item for About section -->
+                        <a href="#">About</a>
+                    </li>
+                    <li> <!-- List item for Projects section -->
+                        <a href="#">Projects</a>
+                        <ul>
+                            <li> <!-- Placeholder for future projects -->
+                                <a href="#">None so far, unfortunately. But they will be coming soon!</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li> <!-- List item for Contacts section -->
+                        <a href="#">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="about-container" id="about"></div>
+    <script src="/js/script.js"></script>
 </body>
 </html>

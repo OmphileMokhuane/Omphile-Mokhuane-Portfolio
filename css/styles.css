@@ -1,7 +1,162 @@
-body {
-    padding: 15px;
+* { 
+    /* Global styles for the entire document */
+    font-family: 'Roboto Mono', sans-serif;
+    color: white;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Galgo Regular';
+    src: url(/fonts/Galgo_Condensed/Galgo.ttf);
+}
+
+@font-face {
+    font-family: 'Nohemi';
+    src: url(/fonts/nohemi-font-family-1740119788-0/Nohemi-Regular-BF6438cc4d0e493.ttf);
+}
+
+body { 
+    /* Reset default padding and margin */
+    padding: 0;
     margin: 0;
     font-family: 'Roboto Mono', sans-serif;
-    background-color: #f0f2f5;
-    overflow: hidden;
+    background-color: #000;
 }
+
+.bgimage{
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    background-color: #000;
+    height: 100%;
+}
+
+.container { 
+    /* Main container for layout */
+    width: 100vw;
+    background-color: transparent;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+
+.left-container, .right-container { 
+    /* Containers for left and right sections of the layout */
+    background: #000;
+    height: 50%;
+    min-height: 30%;
+    display: flex;
+    width: 40%;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border-left: 5px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 5px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+}
+
+.left-container h1 {
+    font-family: 'Nohemi', monospace;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.left-container {
+    flex-direction: column;
+}
+
+.left-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 90%;
+}
+
+.menu a {
+    /* Styles for menu links */
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    text-decoration: none; /* Remove underline on hover */
+    color: #e0e0e0; /* Change text color on hover for better visibility */
+}
+
+.menu ul, .menu ul li {
+    width: 100%;
+    padding: 0;
+    margin-left: 0;;
+}
+
+
+li {
+    list-style: none;
+    margin-bottom: 15px;
+    background-color: transparent;
+    transition: transform 0.2s ease;
+}
+
+
+li:hover {
+    transform: translateX(10px);
+}
+
+.menu{
+    width: 100%;
+    padding: 20px;
+}
+
+.menu ul li {
+    position: relative;
+    width: 100%;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 10px;
+}
+
+.menu ul li ul { 
+    /* Styles for submenu items */
+    display: none; /* Keep submenu hidden by default */
+    margin-top: 10px;
+}
+
+.menu ul li:hover > ul { 
+    /* Show submenu on hover */
+    display: block; /* Show submenu on hover */
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.menu ul li ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu ul li ul li:last-child {
+    border: none;
+    padding-bottom: 0;
+}
+
+/*about section*/
+.about-container{
+    height: 300px;
+    width: 100%;
+    background-color: white;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        overflow-y: auto;
+    }
+    
+    .left-container, .right-container {
+        width: 90%;
+    }
+}
+
+
