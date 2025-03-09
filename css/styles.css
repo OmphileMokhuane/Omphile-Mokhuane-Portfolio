@@ -55,24 +55,29 @@ body {
     transition: all 0.3s ease;
     border-left: 5px solid rgba(255, 255, 255, 0.385);
     border-bottom: 5px solid rgba(255, 255, 255, 0.385);
-    padding: 20px;
+    padding: 25px;
 }
 
 .left-container h1 {
     font-family: 'Nohemi', monospace;
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.8rem;
+    margin-bottom: 0rem;
+    padding: 0;
+    height: auto;
 }
 
 .left-container {
     flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .left-container p {
+    margin: 0;
     font-size: 1.1rem;
     line-height: 1.6;
     opacity: 0.9;
     max-width: 90%;
+    padding: 1px;
 }
 
 .menu a {
@@ -128,7 +133,6 @@ li:hover {
 .menu ul li:hover > ul { 
     /* Show submenu on hover */
     display: block; /* Show submenu on hover */
-    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .menu ul li ul li {
@@ -174,13 +178,33 @@ li:hover {
 
 .about-content{
     padding: 20px 20px 0 20px;
-    width: 350px;
+    width: 500px;
+    text-align: left;
+}
+
+.about-content h2, .about-content h3{
+    margin: 0 0 10px 0;
+    font-family: 'Nohemi';
 }
 
 .about-content h2, .about-content h3, .about-content p{
     color: #000;
-    margin: 0 0 10px 0;
-    font-family: 'Nohemi';
+}
+
+.tech-stack{
+    display: flex;
+    gap: 20px;
+}
+
+.tech-stack span{
+    color: black;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(37, 33, 33, 0.8);
+    padding: 5px;
+    width: Auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 768px) {
