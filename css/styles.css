@@ -1,74 +1,133 @@
-* { 
-    /* Global styles for the entire document */
-    font-family: 'Roboto Mono', sans-serif;
-    color: white;
-    box-sizing: border-box;
+/* 
+ * Portfolio Stylesheet
+ * Author: Omphile Mokhuane
+ * Last Updated: 2025, March 18
+ */
+
+/* ==================== 
+   VARIABLES & ROOT SETTINGS 
+   ==================== */
+:root {
+    /* Colors */
+    --color-primary: #000;
+    --color-secondary: #a3f7bf;
+    --color-text: #fff;
+    --color-text-light: #e6e6e6;
+    --color-text-lighter: #cccccc;
+    --color-bg-light: rgba(255, 255, 255, 0.05);
+    --color-shadow: rgba(37, 33, 33, 0.8);
+    
+    /* Fonts */
+    --font-main: 'Roboto Mono', sans-serif;
+    --font-display: 'Nohemi', sans-serif;
+    
+    /* Spacing */
+    --space-xs: 5px;
+    --space-sm: 10px;
+    --space-md: 15px;
+    --space-lg: 20px;
+    --space-xl: 25px;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 25px;
 }
 
+/* ==================== 
+   FONT IMPORTS & TYPOGRAPHY 
+   ==================== */
 @font-face {
     font-family: 'Galgo Regular';
-    src: url(/fonts/Galgo_Condensed/Galgo.ttf);
+    src: url(../fonts/Galgo_Condensed/Galgo.ttf);
 }
 
 @font-face {
     font-family: 'Nohemi';
-    src: url(/fonts/nohemi-font-family-1740119788-0/Nohemi-Regular-BF6438cc4d0e493.ttf);
+    src: url(../fonts/nohemi-font-family-1740119788-0/Nohemi-Regular-BF6438cc4d0e493.ttf);
 }
 
+* { 
+    font-family: var(--font-main);
+    color: var(--color-text);
+    box-sizing: border-box;
+}
+
+/* ==================== 
+   GLOBAL STYLES & RESET 
+   ==================== */
 body { 
-    /* Reset default padding and margin */
     padding: 0;
     margin: 0;
-    font-family: 'Roboto Mono', sans-serif;
-    background-color: #000;
+    background-color: var(--color-primary);
 }
 
-.bgimage{
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-display);
+    margin: 0 0 var(--space-sm) 0;
+}
+
+/* ==================== 
+   BACKGROUND & LAYOUT 
+   ==================== */
+.bgimage {
     width: 100%;
     z-index: -1;
     position: absolute;
     background: rgba(255, 255, 255);
-    background: linear-gradient(0deg, rgba(255,255,255,1)10%,rgba(0,0,0,1)68%);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(0,0,0,1) 68%);
     height: 100%;
 }
 
 .container { 
-    /* Main container for layout */
     width: 100vw;
     background-color: transparent;
     height: 100vh;
     display: flex;
     align-items: center;
     gap: 40px;
-    padding: 20px;
+    padding: var(--space-lg);
     justify-content: space-evenly;
 }
 
 .left-container, .right-container { 
-    /* Containers for left and right sections of the layout */
     background: transparent;
     height: 50%;
     min-height: 30%;
     display: flex;
     width: 40%;
-    border-radius: 25px;
+    border-radius: var(--radius-lg);
     transition: all 0.3s ease;
     border-left: 5px solid rgba(255, 255, 255, 0.385);
     border-bottom: 5px solid rgba(255, 255, 255, 0.385);
-    padding: 25px;
+    padding: var(--space-xl);
 }
 
-.left-container h1 {
-    font-family: 'Nohemi', monospace;
-    font-size: 2.8rem;
-    margin-bottom: 0rem;
-    padding: 0;
-    height: auto;
-}
-
+/* ==================== 
+   LEFT CONTAINER STYLES 
+   ==================== */
 .left-container {
     flex-direction: column;
     justify-content: space-evenly;
+}
+
+.left-container h1 {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    margin-bottom: 0;
+    padding: 0;
+    height: auto;
 }
 
 .left-container p {
@@ -80,59 +139,93 @@ body {
     padding: 1px;
 }
 
+.subtitle {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--color-text-light);
+    margin-top: var(--space-xs) !important;
+}
+
+.location {
+    font-size: 1rem;
+    color: var(--color-text-lighter);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--color-secondary);
+    margin-top: var(--space-sm) !important;
+}
+
+/* ==================== 
+   SOCIAL MEDIA ICONS 
+   ==================== */
+.logo-container {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--color-secondary);
+    transform: translateY(-3px);
+}
+
+/* ==================== 
+   NAVIGATION MENU 
+   ==================== */
+.menu {
+    width: 100%;
+    padding: var(--space-lg);
+}
+
 .menu a {
-    /* Styles for menu links */
-    text-decoration: none;
-    color: #fff;
+    color: var(--color-text);
     font-size: 1.1rem;
     transition: color 0.2s ease;
 }
 
 .menu a:hover {
-    text-decoration: none; /* Remove underline on hover */
-    color: #e0e0e0; /* Change text color on hover for better visibility */
+    color: var(--color-text-light);
 }
 
 .menu ul, .menu ul li {
     width: 100%;
     padding: 0;
-    margin-left: 0;;
+    margin-left: 0;
 }
 
-
 li {
-    list-style: none;
-    margin-bottom: 15px;
+    margin-bottom: var(--space-md);
     background-color: transparent;
     transition: transform 0.2s ease;
 }
 
-
 li:hover {
     transform: translateX(10px);
-}
-
-.menu{
-    width: 100%;
-    padding: 20px;
 }
 
 .menu ul li {
     position: relative;
     width: 100%;
     border-bottom: 2px solid rgba(255, 255, 255);
-    padding-bottom: 10px;
+    padding-bottom: var(--space-sm);
 }
 
-.menu ul li ul { 
-    /* Styles for submenu items */
-    display: none; /* Keep submenu hidden by default */
-    margin-top: 10px;
+.menu ul li ul {
+    display: none;
+    margin-top: var(--space-sm);
 }
 
-.menu ul li:hover > ul { 
-    /* Show submenu on hover */
-    display: block; /* Show submenu on hover */
+.menu ul li:hover > ul {
+    display: block;
 }
 
 .menu ul li ul li {
@@ -144,70 +237,273 @@ li:hover {
     padding-bottom: 0;
 }
 
-/*about section*/
-.about-container{
-    height: 550px;
+/* ==================== 
+   ABOUT SECTION 
+   ==================== */
+.about-container {
+    height: 100vh;
     width: 100%;
-    background-color: white;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%); 
     margin: 0;
     display: flex; 
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: var(--space-lg);
 }
 
-.polaroid, .about-content{
-    height: 350px;
-    background-color: #fff;
+.about-content {
+    padding: var(--space-lg) var(--space-lg) 0 var(--space-lg);
+    width: 500px;
+    text-align: left;
+    background-color: transparent;
+    height: auto;
 }
 
-.polaroid{
+.about-content h2, 
+.about-content h3 {
+    margin: 0 0 var(--space-sm) 0;
+    font-family: var(--font-display);
+}
+
+.about-content h2, 
+.about-content h3, 
+.about-content p {
+    color: var(--color-primary);
+}
+
+.about-text {
+    margin-bottom: var(--space-lg);
+    line-height: 1.6;
+}
+
+/* ==================== 
+   POLAROID IMAGE 
+   ==================== */
+.polaroid {
     width: 300px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 20px 10px 0 10px;
-    box-shadow: 0 4px 8px rgba(37, 33, 33, 0.8);
+    align-items: center;
+    padding: var(--space-lg) var(--space-sm) 40px var(--space-sm);
+    box-shadow: 0 4px 8px var(--color-shadow);
+    position: relative;
+    background-color: #fff;
+    height: auto;
 }
 
-.polaroid-image{
+.polaroid-image {
     width: 250px;
     height: 280px;
     margin: 0;
     padding: 0;
+    object-fit: cover;
 }
 
-.about-content{
-    padding: 20px 20px 0 20px;
-    width: 500px;
-    text-align: left;
+.polaroid-caption {
+    margin-top: var(--space-md);
+    font-family: var(--font-display);
+    color: var(--color-primary);
+    font-size: 1rem;
+    text-align: center;
 }
 
-.about-content h2, .about-content h3{
-    margin: 0 0 10px 0;
-    font-family: 'Nohemi';
-}
-
-.about-content h2, .about-content h3, .about-content p{
-    color: #000;
-}
-
-.tech-stack{
+/* ==================== 
+   STATS DISPLAY 
+   ==================== */
+.stats-container {
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    margin: var(--space-lg) 0;
 }
 
-.tech-stack span{
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    font-family: var(--font-display);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #bcb8b8;
+    text-align: center;
+}
+
+/* ==================== 
+   TECH STACK 
+   ==================== */
+.tech-stack {
+    display: flex;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.tech-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    padding: var(--space-xs);
+    background-color: transparent;
+    border-radius: var(--radius-md);
+}
+
+.tech-item:hover .tech-logo {
+    transform: scale(1.1);
+    background-color: rgba(230, 230, 230, 0.8);
+}
+
+.tech-stack span {
     color: black;
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(37, 33, 33, 0.8);
-    padding: 5px;
-    width: Auto;
-    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--color-shadow);
+    padding: var(--space-xs);
+    width: auto;
+    border-radius: var(--radius-sm);
     display: flex;
     justify-content: center;
 }
 
+/* ==================== 
+   FOOTER 
+   ==================== */
+.footer {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    padding: 15px 10px 15px;
+    margin-top: 50px;
+    max-height: 250px;
+    overflow: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    margin-bottom: var(--space-md);
+    font-family: var(--font-display);
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.footer-section h3:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-secondary);
+}
+
+.footer-section p {
+    margin: 8px 0;
+    font-size: 0.9rem;
+}
+
+.footer-section i {
+    margin-right: var(--space-sm);
+    color: var(--color-secondary);
+}
+
+.footer-section p a {
+    color: var(--color-text);
+    transition: color 0.3s ease;
+}
+
+.footer-section p a:hover {
+    color: var(--color-secondary);
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: var(--color-text);
+    font-size: 0.9rem;
+}
+
+.footer-section ul li a:hover {
+    color: var(--color-secondary);
+    padding-left: 5px;
+}
+
+.footer-section ul.quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer-section ul.quick-links li {
+    margin-bottom: 0;
+    margin-right: var(--space-sm);
+}
+
+.footer-section ul.quick-links li a {
+    padding: 3px 8px;
+    background-color: var(--color-bg-light);
+    border-radius: var(--radius-sm);
+}
+
+.footer-section ul.quick-links li a:hover {
+    background-color: rgba(163, 247, 191, 0.1);
+    padding-left: 8px;
+}
+
+.footer-social {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+}
+
+/* ==================== 
+   PROJECTS SECTION
+   ==================== */
+.projects-container {
+    /* Styles will be added when projects section is implemented */
+    min-height: 100px;
+}
+
+/* ==================== 
+   RESPONSIVE STYLES 
+   ==================== */
 @media (max-width: 768px) {
+    /* Container responsive styles */
     .container {
         flex-direction: column;
         height: auto;
@@ -216,6 +512,40 @@ li:hover {
     
     .left-container, .right-container {
         width: 90%;
+    }
+    
+    /* Footer responsive styles */
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    /* About section responsive styles */
+    .about-container {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 0;
+        background: white;
+    }
+    
+    .polaroid, .about-content {
+        width: 90%;
+    }
+    
+    /* Tech stack responsive styles */
+    .tech-stack {
+        justify-content: center;
+    }
+    
+    .tech-logo {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-logo {
+        width: 30px;
+        height: 30px;
     }
 }
 
