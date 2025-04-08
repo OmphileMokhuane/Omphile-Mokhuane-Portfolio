@@ -47,10 +47,12 @@
     src: url(../fonts/nohemi-font-family-1740119788-0/Nohemi-Regular-BF6438cc4d0e493.ttf);
 }
 
-* { 
+* {
     font-family: var(--font-main);
     color: var(--color-text);
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* ==================== 
