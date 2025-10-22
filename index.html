@@ -3,125 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Omphile Mokhuane - Front-End Developer Portfolio">
+    <meta name="description" content="Omphile Mokhuane - Front-End Developer Portfolio showcasing projects and skills">
+    <meta name="theme-color" content="#000000">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Omphile Mokhuane | Front-End Developer</title>
 </head>
 <body>
-    <!-- Background Animation -->
+    <!-- Background Animation Canvas -->
     <div class="bgimage">
         <canvas class="lamp-anim" id="lamp-anim" width="1500" height="800"></canvas>
-    </div> 
+    </div>
     
-    <!-- Header/Introduction Section -->
-    <header class="container" id="home">
-        <div class="left-container">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Hello, I'm Omphile Mokhuane</p>
-            <p class="subtitle">Front-End Developer</p>
-            <p class="location">Rustenburg, North West</p>
-            <div class="logo-container">
-                <a title="GitHub" href="https://github.com/OmphileMokhuane/OmphileMokhuane" class="social-icon" aria-label="GitHub Profile">
-                    <i class="fab fa-github" aria-hidden="true"></i>
-                </a>
-                <a title="LinkedIn" href="https://www.linkedin.com/in/omphile-mokhuane-072339273/" class="social-icon" aria-label="LinkedIn Profile">
-                    <i class="fab fa-linkedin" aria-hidden="true"></i>
-                </a>
+    <!-- Header/Hero Section -->
+    <header class="hero-section" id="home">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <span class="brand-text">OM</span>
             </div>
-        </div>
-        <nav class="right-container">
-            <div class="menu">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li>
-                        <a href="#projects">Projects</a>
-                        <ul>
-                            <li><a href="#">Coming soon!</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#contact">Contacts</a></li>
+            <button class="hamburger" id="hamburger-menu" aria-label="Toggle navigation" aria-controls="main-menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="nav-menu" id="main-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </div>
         </nav>
-    </header>
-    
-    <!-- About Section -->
-    <section class="about-container" id="about">
-        <div class="polaroid">
-            <img src="img/portfolio_img.jpg" alt="Omphile Mokhuane headshot" class="polaroid-image">
-            <div class="polaroid-caption">Front-End Developer</div>
-        </div>
-        <div class="about-content">
-            <h2>About Me</h2>
-            <p class="about-text">
-                I have a B.Sc in Information Technology, having graduated in 2024. I specialize in building responsive 
-                and user-friendly applications and websites with clean, maintainable code.
-            </p>
-            <div class="stats-container">
-                <div class="stat-item">
-                    <span class="stat-number">0</span>
-                    <span class="stat-label">Years Experience</span>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="greeting">Hi, I'm</span>
+                    <span class="name">Omphile Mokhuane</span>
+                </h1>
+                <p class="hero-subtitle">Front-End Developer</p>
+                <p class="hero-description">I create beautiful, responsive web experiences.</p>
+                <p class="hero-location">
+                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                    Rustenburg, North West
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">0</span>
-                    <span class="stat-label">Projects Completed</span>
-                </div>
-            </div>
-            <h3>Tech Stack</h3> 
-            <div class="tech-stack">
-                <div class="tech-item">
-                    <img src="icons/html-logo.png" alt="HTML logo" class="tech-logo">
-                </div>
-                <div class="tech-item">
-                    <img src="icons/css-logo.png" alt="CSS logo" class="tech-logo">
-                </div>
-                <div class="tech-item">
-                    <img src="icons/js-logo.png" alt="JavaScript logo" class="tech-logo">
-                </div>
-                <div class="tech-item">
-                    <img src="icons/bootstrap-logo.png" alt="Bootstrap logo" class="tech-logo">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Projects Section Placeholder -->
-    <section class="projects-container" id="projects">
-        <!-- Will be implemented in the future -->
-    </section>
-    
-    <!-- Footer/Contact Section -->
-    <footer class="footer" id="contact">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Contact Me</h3>
-                <p><i class="fas fa-envelope" aria-hidden="true"></i><a href="mailto:mokhuaneomphile@gmail.com">mokhuaneomphile@gmail.com</a></p>
-                <p><i class="fas fa-phone" aria-hidden="true"></i><a href="tel:+27718321325">+27 71 832 1325</a></p>
-                <div class="footer-social">
-                    <a title="GitHub" href="https://github.com/OmphileMokhuane/OmphileMokhuane" class="social-icon" aria-label="GitHub Profile">
+                <div class="social-links">
+                    <a href="https://github.com/OmphileMokhuane/OmphileMokhuane" class="social-icon" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-github" aria-hidden="true"></i>
                     </a>
-                    <a title="LinkedIn" href="https://www.linkedin.com/in/omphile-mokhuane-072339273/" class="social-icon" aria-label="LinkedIn Profile">
+                    <a href="https://www.linkedin.com/in/omphile-mokhuane-072339273/" class="social-icon" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-linkedin" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul class="quick-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                </ul>
+        </div>
+        
+        <div class="scroll-indicator">
+            <a href="#about" aria-label="Scroll to about section">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </header>
+    
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title about-title">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="polaroid">
+                        <img src="img/portfolio_img.jpg" alt="Omphile Mokhuane" class="polaroid-image" loading="lazy">
+                        <div class="polaroid-caption">Front-End Developer</div>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <p class="about-text">
+                        I'm a beginner Front-End Developer with a B.Sc in Information Technology, graduated in 2024. 
+                        I specialize in creating responsive, user-friendly web applications, and website that combine aesthetic design 
+                        with functional excellence.
+                    </p>
+                    <p class="about-text">
+                        My approach focuses on writing clean, maintainable code while ensuring exceptional user experiences 
+                        across all devices. I'm constantly learning and exploring new technologies to stay at the forefront 
+                        of web development.
+                    </p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-number" data-target="1">0</span>
+                            <span class="stat-label">Year Experience</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-target="2">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-stack-section">
+                        <h3 class="subsection-title">Tech Stack</h3>
+                        <div class="tech-grid">
+                            <div class="tech-card">
+                                <img src="icons/html-logo.png" alt="HTML" class="tech-logo" loading="lazy">
+                                <span class="tech-name">HTML5</span>
+                            </div>
+                            <div class="tech-card">
+                                <img src="icons/css-logo.png" alt="CSS" class="tech-logo" loading="lazy">
+                                <span class="tech-name">CSS3</span>
+                            </div>
+                            <div class="tech-card">
+                                <img src="icons/js-logo.png" alt="JavaScript" class="tech-logo" loading="lazy">
+                                <span class="tech-name">JavaScript</span>
+                            </div>
+                            <div class="tech-card">
+                                <img src="icons/bootstrap-logo.png" alt="Bootstrap" class="tech-logo" loading="lazy">
+                                <span class="tech-name">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; <span id="current-year">2024</span> Omphile Mokhuane. All rights reserved.</p>
+    </section>
+    
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Projects</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">Explore some of my recent work</p>
+            </div>
+            
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image-wrapper">
+                        <img src="img/project-1/boikhutso-landing-page.png" alt="Boikhutso Mining And Engineering website" class="project-image" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://boikhutso-mining.vercel.app/" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View Boikhutso Mining live site">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Boikhutso Mining & Engineering</h3>
+                        <p class="project-description">
+                            A modern, professional business website featuring responsive design, service showcases, 
+                            and optimized performance for a mining and engineering company.
+                            <span class="notice-badge">Still a work in progress</span>
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <div class="project-image-wrapper">
+                        <img src="img/project-2/dalimbos-construction-landing-page.png" alt="Dalimbos construction landing page" class="project-image" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://dalimbosconstruction.co.za/" class="project-link" aria-label="View project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/OmphileMokhuane/Dalimbos_construction" class="project-link" aria-label="View source code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Da Limbos Construction</h3>
+                        <p class="project-description">
+                            A professional business website for a local business based in Rustenburg. Outlines the business, and its services.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <footer class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title light">Let's Work Together</h2>
+                <div class="title-underline light"></div>
+                <p class="section-description light">Have a project in mind? Let's talk!</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:mokhuaneomphile@gmail.com">mokhuaneomphile@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <a href="tel:+27718321325">+27 71 832 1325</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Rustenburg, North West</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-social">
+                    <h3>Connect With Me</h3>
+                    <div class="social-links-large">
+                        <a href="https://github.com/OmphileMokhuane/OmphileMokhuane" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/omphile-mokhuane-072339273/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> Omphile Mokhuane. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
     <!-- Scripts -->
+    <script src="js/lava-animation.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
