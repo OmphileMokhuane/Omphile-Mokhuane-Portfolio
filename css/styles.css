@@ -169,22 +169,9 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1rem;
-}
-
-.nav-brand {
-    font-family: var(--font-display);
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.brand-text {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    justify-content: center;
+    padding: 1 1rem;
+    height: fit-content;
 }
 
 .nav-menu {
@@ -266,6 +253,7 @@ button {
     align-items: center;
     padding-top: 80px;
     overflow: hidden;
+    height: 100vh;
 }
 
 .hero-content {
